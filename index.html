@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="tooltips" id="tooltips">
+      <div class="content">
+        <div class="info">
+          There's so much to learn about your new home. Start by learning the
+          basics below.
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width slides/quotes -->
+          <div class="slides"></div>
+          <!-- Next/prev buttons -->
+          <div class="buttons">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a id="tooltipHidder" class="next">Watch intro video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        z-index: 100;
+      "
+      class="black"
+    >
+      <div class="video__legend" id="videoLegend">
+        <div class="video__part">
+          <img src="./img/arrow_up.png" alt="" />
+          <p>Arrow up to increase volume</p>
+        </div>
+        <div class="video__part">
+          <img src="./img/arrow_down.png" alt="" />
+          <p>Arrow down to decrease volume</p>
+        </div>
+        <div class="video__part">
+          <img src="./img/volume-mute.png" alt="" />
+          <p>Spacebar to mute</p>
+        </div>
+        <div class="video__part">
+          <p>Press H to hide UI</p>
+        </div>
+        <div class="video__part" id="tooltipShower">
+          <img src="./img/tooltips.png" alt="" />
+          <a>Show Tooltips</a>
+        </div>
+      </div>
+      <p class="saving"><span>.</span><span>.</span><span>.</span></p>
+    </div>
+    <div id="player"></div>
+    <script>
+      const videos = [
+        // "HWurFwhu09s",
+        "JO514L0AOTE",
+        // "HyB-szj4Xnw",
+        "ZQiONrwQUC0",
+        "4mWHoDow8Lc",
+        "ltDZvXa3vKw",
+        "_08sRhvSNsY",
+        "6YvqeWHj368",
+      ];
+      let pickedvideo = videos[Math.floor(Math.random() * videos.length)];
+      // 2. This code loads the IFrame Player API code asynchronously.
+      let tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      let firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      let player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("player", {
+          height: "100%",
+          width: "100%",
+          videoId: pickedvideo,
+          playerVars: {
+            autoplay: 1,
+            showinfo: 0,
+            autohide: 1,
+            frameborder: 0,
+            loop: 1,
+            controls: 0,
+            modestbranding: 0,
+          },
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        player.setVolume(5);
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      var done = false;
+
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          player.setVolume(5);
+          player.setLoop(true);
+          done = true;
+        }
+      }
+
+      window.addEventListener("keyup", function (e) {
+        if (e.which == 38) {
+          player.setVolume(player.getVolume() + 5);
+        } else if (e.which == 40) {
+          player.setVolume(player.getVolume() - 5);
+        } else if (e.which == 32) {
+          if (player.isMuted()) {
+            player.unMute();
+          } else {
+            player.mute();
+          }
+        }
+      });
+    </script>
+    <script src="js/tooltipItems.js"></script>
+    <script src="js/tooltips.js"></script>
+  </body>
+</html>
