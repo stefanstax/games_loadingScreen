@@ -9,8 +9,7 @@
     <div class="tooltips" id="tooltips">
       <div class="content">
         <div class="info">
-          There's so much to learn about your new home. Start by learning the
-          basics below.
+          There's so much to learn about your new home. Start by learning the basics below.
         </div>
         <!-- Slideshow container -->
         <div class="slideshow-container">
@@ -49,12 +48,9 @@
           <img src="./img/volume-mute.png" alt="" />
           <p>Spacebar to mute</p>
         </div>
-        <div class="video__part">
-          <p>Press H to hide UI</p>
-        </div>
         <div class="video__part" id="tooltipShower">
           <img src="./img/tooltips.png" alt="" />
-          <a>Show Tooltips</a>
+          <a>Press T to Show Tooltips</a>
         </div>
       </div>
       <p class="saving"><span>.</span><span>.</span><span>.</span></p>
@@ -62,14 +58,14 @@
     <div id="player"></div>
     <script>
       const videos = [
-        // "HWurFwhu09s",
+        "HWurFwhu09s",
         "JO514L0AOTE",
-        // "HyB-szj4Xnw",
+        "HyB-szj4Xnw",
         "ZQiONrwQUC0",
         "4mWHoDow8Lc",
         "ltDZvXa3vKw",
         "_08sRhvSNsY",
-        "6YvqeWHj368",
+        "6YvqeWHj368"
       ];
       let pickedvideo = videos[Math.floor(Math.random() * videos.length)];
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -93,12 +89,12 @@
             frameborder: 0,
             loop: 1,
             controls: 0,
-            modestbranding: 0,
+            modestbranding: 0
           },
           events: {
             onReady: onPlayerReady,
-            onStateChange: onPlayerStateChange,
-          },
+            onStateChange: onPlayerStateChange
+          }
         });
       }
 
