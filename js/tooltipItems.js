@@ -16,54 +16,54 @@ tips - general server tips
 let tooltips = [
   {
     name: "You can store a vehicle at one of the five public garages",
-    type: "vehicles",
+    type: "vehicles"
   },
   {
     name: "You can drill safes at the back of the store items",
-    type: "criminal",
+    type: "criminal"
   },
   {
     name: "You can not rob somebody else's property. In case you were trying. :)",
-    type: "tips",
+    type: "tips"
   },
   {
     name: "Not paying for police fines can have certain disadvantages to your character's lifestyle",
-    type: "police",
+    type: "police"
   },
   {
     name: "Be careful how you enroll into any criminal activity, be wary of the evidence you may leave behind.",
-    type: "criminal-tips",
+    type: "criminal-tips"
   },
   {
     name: "You have exciting ideas to talk about? Feel free to open a ticket and let's discuss it. Come prepared, please.",
-    type: "help",
+    type: "help"
   },
   {
     name: "Investing more time into personal vehicles can get you somewhere faster, or from someone...",
-    type: "vehicles-tips",
+    type: "vehicles-tips"
   },
   {
     name: "Having a medical innsurance can really save your wallet",
-    type: "medical",
+    type: "medical"
   },
   {
     name: "Whenever you get arrested for whatever you always have a right to request for a lawyer. Public defender or a personal one.",
-    type: "lawyer",
+    type: "lawyer"
   },
   {
     name: "Dynasty Agency have their own website which you can visit at any time to browse their current live listings.",
-    type: "dynasty",
+    type: "dynasty"
   },
   {
     name: "Dynasty Agency can publicly publish listings which you can purchase without having an agent next to you. Check your map legend for: Property for sale",
-    type: "dynasty",
+    type: "dynasty"
   },
   {
     name: "There's a variety of public job to generate you some legal income.",
-    type: "jobs",
+    type: "jobs"
   },
   {
     name: "Progress in a specific job can grant you more income.",
-    type: "jobs-tips",
-  },
+    type: "jobs-tips"
+  }
 ];

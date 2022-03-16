@@ -1,4 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&display=swap"); */
+
+@font-face {
+  font-family: "Fredoka";
+  font-weight: 400;
+  src: url(../fonts/Fredoka-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Fredoka";
+  font-weight: 600;
+  src: url(../fonts/Fredoka-SemiBold.ttf);
+}
 
 html,
 body {
@@ -8,6 +20,21 @@ body {
   margin: 0;
   overflow: hidden hidden;
   font-family: "Fredoka", sans-serif;
+}
+
+p,
+span,
+a {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 
 .img-center {
@@ -131,7 +158,10 @@ div.content {
 
 div.info {
   margin: 30px 0px;
-  font-weight: bold;
+}
+
+div.info h1 {
+  font-size: 24px;
 }
 
 /* Video menu  */
@@ -213,7 +243,7 @@ div.slides {
   max-height: calc(100% - 10px);
   text-align: left;
   line-height: 150%;
-  font-size: 30px;
+  font-size: 23px;
 }
 /* Image shared styling for all categories  */
 .tooltip-slide {
@@ -223,50 +253,54 @@ div.slides {
   border-radius: 0px 15px 15px 0px;
 }
 /* Images for categories */
-.tooltip-slide.vehicles {
-  background: url("../img/tooltipType_vehicles.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+.tooltip-slide {
+  background: url("../img/tooltipType_noIcon.png"),
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.vehicles-tips {
   background: url("../img/tooltipType_vehicle-tips.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
+}
+.tooltip-slide.vehicles {
+  background: url("../img/tooltipType_vehicles.png"),
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.criminal {
   background: url("../img/tooltipType_crime.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.criminal-tips {
   background: url("../img/tooltipType_robbery.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.police {
   background: url("../img/tooltipType_police.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.medical {
   background: url("../img/tooltipType_medical.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.lawyer {
   background: url("../img/tooltipType_lawyer.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.dynasty {
   background: url("../img/tooltipType_dynasty.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.jobs,
 .tooltip-slide.jobs-tips {
   background: url("../img/tooltipType_jobs.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.tips {
   background: url("../img/tooltipType_tips.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 .tooltip-slide.help {
   background: url("../img/tooltips.png"),
-    linear-gradient(125deg, transparent 74%, rgba(255, 255, 255, 255) 30%);
+    linear-gradient(135deg, transparent 80%, rgba(255, 255, 255, 255) 30%);
 }
 
 /* Next & previous buttons */
