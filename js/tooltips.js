@@ -72,20 +72,9 @@ function showSlides(n) {
   });
 })();
 
-window.addEventListener("keyup", function (e) {
-  if (e.which == 72 && tooltipsModal.classList.value.includes("hidden")) {
-    videoLegend.classList.add("hidden");
-  } else if (
-    e.which == 72 &&
-    !tooltipsModal.classList.value.includes("hidden")
-  ) {
-    videoLegend.classList.remove("hidden");
-  } else if (
-    e.which == 72 &&
-    tooltipsModal.classList.value.includes("hidden") &&
-    videoLegend.classList.value.includes("hidden")
-  ) {
+window.addEventListener("keydown", function (e) {
+  if (e.which == 84 && tooltipsModal.classList.value.includes("hidden")) {
     tooltipsModal.classList.remove("hidden");
-    videoLegend.classList.remove("hidden");
+    videoLegend.classList.add("active");
   }
 });
